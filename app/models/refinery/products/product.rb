@@ -1,13 +1,13 @@
 module Refinery
   module Products
     class Product < Refinery::Core::BaseModel
-      extend FriendlyId
+      #extend FriendlyId
 
       self.table_name = 'refinery_products'
 
       translates :title, :body, :slug
 
-      friendly_id :title, :use => [:slugged, :globalize]
+      #friendly_id :title, :use => [:slugged, :globalize]
 
       belongs_to :file, :class_name => '::Refinery::Resource'
 
